@@ -58,7 +58,11 @@ sed -n '/cpu:/p'  /var/www/html/cpu/cpu_info*.txt | awk '{s+=$2}END{print "Avera
 ```
 ## Result
 
+![main] (/main.png)
 
+![disk] (/disk.png)
+![info](/info.png)
+![avg](/avg.png)
 
 
 
