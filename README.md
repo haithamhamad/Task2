@@ -20,6 +20,8 @@ top -bn1  | awk '{if(NR>5){s+=$9}}END{ print "cpu: " s "%"}' >>  /var/www/html/c
 ```
 ## Script for collecting the average of the prevuois data 
 ```
+ #!/bin/bash
+ 
 diskname="disk_avg_$(date "+%H:%M:%S-%F")"
 memoryname="memory_avg_$(date "+%H:%M:%S-%F")"
 cpuname="cpu_avg_$(date "+%H:%M:%S-%F")"
@@ -58,9 +60,9 @@ sed -n '/cpu:/p'  /var/www/html/cpu/cpu_info*.txt | awk '{s+=$2}END{print "Avera
 ```
 ## Result
 
-![main] (/main.png)
+![main](/main.png)
 
-![disk] (/disk.png)
+![disk](/disk.png)
 ![info](/info.png)
 ![avg](/avg.png)
 
